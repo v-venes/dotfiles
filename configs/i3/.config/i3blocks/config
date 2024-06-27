@@ -1,0 +1,134 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+markup=pango
+separator=false
+align=right
+
+#[window]
+#command=$HOME/.config/i3blocks/scripts/window
+#interval=repeat
+#label=<span color="#ffffff"></span> 
+#border=#ffffff
+#color=#a9b1d6
+#border_top=0
+#border_right=0
+#border_left=0
+#border_bottom=1
+
+[disk]
+command=$HOME/.config/i3blocks/scripts/disk
+interval=30
+label=<span color="#41a6b5"></span> 
+border=#41acb5
+color=#41acb5
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[memory]
+command=$HOME/.config/i3blocks/scripts/memory
+instance=mem
+interval=30
+label=<span color="#7aa2f7"></span> 
+border=#7aa2f7
+color=#7aa2f7
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[cpu]
+command=$HOME/.config/i3blocks/scripts/cpu
+interval=2
+label=<span color="#ff757f"></span> 
+border=#ff757f
+color=#ff757f
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[temperature]
+command=$HOME/.config/i3blocks/scripts/temperature
+instance=Core
+interval=5
+label=<span color="#db4b4b"></span> 
+border=#c53b53
+color=#c53b53
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+
+[sound]
+command=$HOME/.config/i3blocks/scripts/audio
+interval=1
+border=#3d59a1
+color=#3d59a1
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[network]
+command=$HOME/.config/i3blocks/scripts/network
+instance=wlp3s0
+interval=10
+label=<span color="#9d7cd8"></span> 
+border=#9d7cd8
+color=#9d7cd8
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[battery]
+command=$HOME/.config/i3blocks/scripts/battery
+interval=2
+border=#c3e88d
+color=#c3e88d
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[date]
+command=date '+%d/%m/%Y'
+interval=1
+label=<span color="#ffc777"> </span> 
+border=#ffc777
+color=#ffc777
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[time]
+command=date '+%H:%M'
+interval=1
+label=<span color="#ff9e64"> </span> 
+border=#ff9e64
+color=#ff9e64
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+[rofi-powermenu]
+command=echo "<span color=\"#ff007c\"> </span>"; if [ $button ]; then rofi -show menu -modi 'menu:~/.local/bin/rofi-power-menu' > /dev/null; fi
+interval=1
+border=#ff007c
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
