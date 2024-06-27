@@ -32,13 +32,13 @@ My attempt to create a rice for Arch Linux, Feel free to use any configuration y
 ## Installation
 I'm using [stow](https://www.gnu.org/software/stow/) for managing my dotfiles, all the packages are in `packages` folder, so you can use:
 ```sh
-stow -v -R -d ./packages/ -t ~/ -S ./
+cd packages
+stow -v -R -t ~ *
 ```
-> -t is the target folder / -d is the stow directory / -S id for package names
 
 Or if you want to use just some packages:
 ```sh
-stow -v -R -d ./packages/ -t ~/ -S nvim tmux
+stow -v -R -t ~ nvim tmux
 ```
 
 ## Todos
