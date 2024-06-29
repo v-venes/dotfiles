@@ -265,5 +265,8 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Start dunst
 exec --no-startup-id /usr/bin/dunst
-# 
+
+# us with dead keys (for t480 keyboard)
+exec setxkbmap -layout us -variant intl
+
 # TODO: polkit
