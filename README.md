@@ -48,8 +48,6 @@ stow -v -R -t ~ nvim tmux other-packages
 
 > I don't recomend you use \* for all packages, because Yabai and SKHD packages are for macOS only. (I need to automate this 🙃)
 
-Or if you want to use just some packages:
-
 ## Todos
 
 - [ ] List all the dependencies
