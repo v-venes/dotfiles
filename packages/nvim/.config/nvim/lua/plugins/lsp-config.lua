@@ -34,6 +34,10 @@ return {
         capabilities = capabilities,
       })
 
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
+      })
+
       vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, { desc = "LSP Hover" })
       vim.keymap.set("n", "<leader>cD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
       vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition" })
