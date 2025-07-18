@@ -109,13 +109,33 @@ source $ZSH/oh-my-zsh.sh
 # local bin
 export PATH="$HOME/.local/bin:$PATH"
 
-# lsd
+# aliases
 alias ls=lsd
-
 alias v=nvim
+alias lg=lazygit
+alias r=ranger
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+#android 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/venes/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/venes/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/venes/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/venes/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
